@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Número de vezes da palavra na frase</title>
+</head>
+<body>
+    <h1>Número de vezes da palavra na frase:</h1>
+    <label for="frase">Frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <label for="palavra">Palavra:</label>
+    <input type="text" id="palavra">
+    <br><br>
+    <button onclick="contar()">Contar</button>
+    <br><br>
+    <p>Número de repetição: <output id="Nr"></output></p>
+
+<script>
+
+function contar() {
+    let F = document.getElementById("frase").value;
+    let P = document.getElementById("palavra").value;
+
+    let Contador = 0
+    let Palavras = F.split(" ")
+    for (let i=0; i<Palavras.length; i++)
+    if (Palavras[i]===P) {Contador++}
+
+    document.getElementById("Nr").innerHTML = Contador 
+
+}
+
+
+</script>
+</body>
+</html>

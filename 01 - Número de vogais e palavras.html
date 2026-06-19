@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Números de vogais e palavras</title>
+</head>
+<body>
+    <h1>Números de vogais e palavras:</h1>
+    <label for="frase">Insira uma frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <button onclick="contar()">Contar</button>
+    <br><br>
+    <p>Palavras: <output id="p"></output></p>
+    <p>Vogais: <output id="v"></output></p>
+
+<script>
+
+function contar() {
+    let F = document.getElementById("frase").value;
+    
+    let letras = F.length //Conta quantos caracteres existem
+    let aux = ""
+    for (let i=0; i<letras; i++)
+    if (F[i]==="a" || F[i]==="e" || F[i]==="i" || F[i]==="o" || F[i]==="u" || 
+    F[i]==="A" || F[i]==="E" || F[i]==="I" || F[i]==="O" || F[i]==="U")
+    {aux += F[i]}
+
+    let vogais = aux.split("") //Transforma aux em vetor
+    let palavras = F.split(" ") //Transforma F em vetor
+
+    document.getElementById("p").innerHTML = palavras.length //Conta quantos vetores existem
+    document.getElementById("v").innerHTML = vogais.length} //Conta quantos vetores existem
+
+
+</script>
+</body>
+</html>
