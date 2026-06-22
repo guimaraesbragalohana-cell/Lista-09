@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Remover espaço em branco</title>
+</head>
+<body>
+    <h1>Remover espaço em branco:</h1>
+    <label for="frase">Insira uma frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <button onclick="remover()">Remover</button>
+    <br><br>
+    <p>Resultado: <output id="r"></output></p>
+
+<script>
+
+function remover() {
+    let f = document.getElementById("frase").value;
+    let r = f.split(" ")
+
+    document.getElementById("r").innerHTML = r.join("") //Transforma vetor em string 
+
+}
+    
+
+</script>
+</body>
+</html>

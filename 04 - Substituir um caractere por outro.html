@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Substituir um caractere por outro</title>
+</head>
+<body>
+    <h1>Substituir um caractere por outro:</h1>
+    <p>Esse sistema substitui o Caractere 1 pelo Caractere 2 numa frase.</p>
+    <label for="frase">Frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <label for="carac1">Caractere 1:</label>
+    <input type="text" id="carac1">
+    <br><br>
+    <label for="carac2">Caractere 2:</label>
+    <input type="text" id="carac2">
+    <br><br>
+    <button onclick="substituir()">Substituir</button>
+    <br><br>
+    <p>Resultado: <output id="r"></output></p>
+
+<script>
+
+function substituir() {
+    let f = document.getElementById("frase").value;
+    let C1 = document.getElementById("carac1").value;
+    let C2 = document.getElementById("carac2").value;
+
+    let r = "";
+    let Caracteres = f.split("");
+    
+    for (let i = 0; i < f.length; i++) { 
+    if (Caracteres[i] === C1) { r += C2;}
+    else {r += Caracteres[i];}}
+
+    document.getElementById("r").innerHTML = r; 
+}
+</script>
+</body>
+</html>
