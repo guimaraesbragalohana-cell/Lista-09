@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Palavra palíndromo</title>
+</head>
+<body>
+    <h1>Palavra palíndromo:</h1>
+    <label for="palavra">Palavra:</label>
+    <input type="text" id="palavra">
+    <br><br>
+    <button onclick="verificar()">Verificar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function verificar() {
+
+    let Palavra = (document.getElementById("palavra").value);
+    let Minuscula = Palavra.toLowerCase()
+    let Letras = Minuscula.split("")
+
+    let Aux = ""
+    for (let i=Letras.length-1; i>=0; i--){
+        Aux += Letras[i]}
+    
+    let R
+    if (Minuscula===Aux) {R = "A palavra é palíndromo."}
+    else {R = "A palavra não é palíndromo."}
+    
+    document.getElementById("r").innerHTML=R;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Contar número de consoantes</title>
+</head>
+<body>
+    <h1>Contar número de consoantes:</h1>
+    <label for="frase">Frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <button onclick="contar()">Contar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function contar() {
+    let Frase = document.getElementById("frase").value;
+    let Aux = ""
+    let Letras = Frase.split("")
+    for (let i=0; i<Letras.length; i++) {
+        let letra = Letras[i].toLowerCase()
+        if (letra >= "a" && letra <= "z" && !"aeiou".includes(letra))
+        {Aux+=letra} }
+
+    let R = Aux.length
+
+    document.getElementById("r").innerHTML=R;
+    }
+</script>
+</body>
+</html>

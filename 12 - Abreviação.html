@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 - Abreviação</title>
+</head>
+<body>
+    <h1>Abreviação:</h1>
+    <label for="frase">Frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <button onclick="abreviar()">Abreviar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+
+function PrimeiraLetra (p){
+    let l = p.split("")
+    let PL = l[0]
+    return PL}
+
+function abreviar() {
+    let Frase = (document.getElementById("frase").value);
+    let Palavras = Frase.split(" ")
+
+    let R = ""
+    for (let i=0; i<Palavras.length; i++){
+    R+= PrimeiraLetra(Palavras[i])}
+
+    document.getElementById("r").innerHTML=R;
+    }
+</script>
+</body>
+</html>

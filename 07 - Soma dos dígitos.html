@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Soma dos dígitos</title>
+</head>
+<body>
+    <h1>Soma dos dígitos:</h1>
+    <p>Atenção: Insira um número inteiro e positivo!</p>
+    <label for="numero">Número:</label>
+    <input type="number" id="numero">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function calcular() {
+    let N = (document.getElementById("numero").value);
+    let R = 0
+    let Vetor = N.split("")
+    for (let i=0; i<Vetor.length; i++){
+    let numero = parseInt(Vetor[i])
+    R += numero}
+
+    document.getElementById("r").innerHTML=R; }
+</script>
+</body>
+</html>
+

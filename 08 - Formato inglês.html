@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Formato inglês</title>
+</head>
+<body>
+    <h1>Formato inglês:</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+    <br><br>
+    <button onclick="transformar()">Transformar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function transformar() {
+
+    let N = (document.getElementById("nome").value);
+    let Palavras = N.split(" ")
+    let Quantidade = Palavras.length
+    let Sobrenome = Palavras[Quantidade-1]
+    let Nome = ""
+
+    for (let i=0; i<Quantidade-1; i++){
+        Nome += Palavras[i]+" "}
+
+    let R = Sobrenome+" "+Nome
+
+    document.getElementById("r").innerHTML=R;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Posições pares</title>
+</head>
+<body>
+    <h1>Posições pares:</h1>
+    <p>Atenção: Esse programa lê uma palavra e gera uma nova string contendo apenas os caracteres das posições pares.</p>
+    <label for="palavra">Palavra:</label>
+    <input type="text" id="palavra">
+    <br><br>
+    <button onclick="gerar()">Gerar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function gerar() 
+    {
+    let Palavra = (document.getElementById("palavra").value);
+    let Letras = Palavra.split("")
+    let R = ""
+
+    for (let i=0; i<Letras.length; i++) {
+        if (i%2===0) {R+=Letras[i]}}
+
+    document.getElementById("r").innerHTML=R;
+    }
+</script>
+</body>
+</html>

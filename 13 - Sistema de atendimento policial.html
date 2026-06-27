@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Sistema de atendimento policial</title>
+</head>
+<body>
+    <h1>Sistema de atendimento policial:</h1>
+
+    <p>Nota: Por incapacidade e falta de tempo, não fiz o sistema 100% completo. Volto mais tarde para consertá-lo.</p>
+
+    <p>Selecione uma ocorrência:</p>
+    <button onclick="DireçãoPerigosa()">Direção Perigosa</button>
+    <br><br>
+    <button onclick="Barulho()">Barulho</button>
+    <br><br>
+    <button onclick="Bebedeira()">Bebedeira</button>
+    <br><br>
+    <button onclick="Homer()">Homer</button>
+    <br><br>
+    
+    <p>Chefe de polícia Clancy: <output id="r1"></output></p>
+    <p>Policial Eddie: <output id="r2"></output></p>
+    <p>Policial Lou: <output id="r3"></output></p>
+    <br><br>
+    <p>Direção Perigosa: <output id="r4"></output></p>
+    <p>Barulho: <output id="r5"></output></p>
+    <p>Bebedeira: <output id="r6"></output></p>
+    <p>Homer: <output id="r7"></output></p>
+
+
+<script>
+let contador1 = 0
+let contador2 = 0
+let contador3 = 0
+let contador4 = 0
+
+let Clancy = ""
+let Eddie = ""
+let Lou = ""
+
+
+function DireçãoPerigosa(){
+contador1+=1
+Eddie+="<br>"+"Direção Perigosa"
+document.getElementById("r4").innerHTML = contador1;
+document.getElementById("r2").innerHTML = Eddie;}
+
+function Barulho(){
+contador2+=1
+Lou+="<br>"+"Barulho"
+document.getElementById("r5").innerHTML = contador2;
+document.getElementById("r3").innerHTML = Lou;}
+
+function Bebedeira(){
+contador3+=1
+Lou+="<br>"+"Bebedeira"
+document.getElementById("r6").innerHTML = contador3;
+document.getElementById("r3").innerHTML = Lou;}
+
+function Homer(){
+contador4+=1
+Clancy+="<br>"+"Homer"
+document.getElementById("r7").innerHTML = contador4;
+document.getElementById("r1").innerHTML = Clancy;}
+
+</script>
+</body>
+</html>

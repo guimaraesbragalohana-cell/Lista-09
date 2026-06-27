@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Letras repetidas</title>
+</head>
+<body>
+    <h1>Letras repetidas:</h1>
+    <label for="palavra">Palavra:</label>
+    <input type="text" id="palavra">
+    <br><br>
+    <button onclick="verificar()">Verificar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function verificar() {
+    let Palavra = (document.getElementById("palavra").value);
+    let Minuscula = Palavra.toLowerCase()
+    let Letras = Minuscula.split("")
+
+    let aux = ""
+    for (let i=0; i<Letras.length; i++){
+        if (Letras[i]===Letras[i+1]) {aux += Letras[i]+Letras[i+1]}}
+
+    let R
+    if (aux!=="") {R="A palavra possui letras repetidas."}
+    else {R="A palavra não possui letras repetidas."}
+
+    document.getElementById("r").innerHTML=R; }
+</script>
+</body>
+</html>

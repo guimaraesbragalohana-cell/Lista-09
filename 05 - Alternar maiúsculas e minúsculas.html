@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Alternar maiúsculas e minúsculas</title>
+</head>
+<body>
+    <h1>Alternar maiúsculas e minúsculas:</h1>
+    <label for="frase">Frase:</label>
+    <input type="text" id="frase">
+    <br><br>
+    <button onclick="alternar()">Alternar</button>
+    <br><br>
+    <p>Resposta: <output id="r"></output></p>
+
+<script>
+function trocar(l) {
+
+    let maiusculas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", 
+    "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+    let minusculas = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
+    "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+    for (let i=0; i<maiusculas.length; i++) {
+        for (let c=0; c<l.length; c++) {
+            if (l[c]===maiusculas[i]) {l[c]=minusculas[i]}
+            else if (l[c]===minusculas[i]) {l[c]=maiusculas[i]}} } 
+
+    return l}
+
+function alternar() {
+
+    let Frase = (document.getElementById("frase").value);
+    let Letras = Frase.split("")
+    let R = trocar(Letras)
+
+    document.getElementById("r").innerHTML=R.join("");
+    }
+</script>
+</body>
+</html>
